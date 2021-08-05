@@ -1,4 +1,5 @@
 # 교내 동아리 웹 사이트
+------
 
 ## 프로젝트 목적
 
@@ -6,16 +7,16 @@
 
 ## 개발 환경 설정
 
-1. bitnami 혹은 xampp 설치
-2. git clone 후 git 명령어를 통해 로컬과 원격 코드 공유
-   $ git clone https://github.com/MingyeomKim/webgrus_project.git
-   $ git init
-   (코드 수정 후)
-   $ git add .
-   $ git commit -m "commit message"
-   $ git push origin "MyBranch"
+1. bitnami 혹은 xampp 설치   
+2. git clone 후 git 명령어를 통해 로컬과 원격 코드 공유   
+   $ git clone https://github.com/MingyeomKim/webgrus_project.git  
+   $ git init  
+   (코드 수정 후)  
+   $ git add .  
+   $ git commit -m "commit message"  
+   $ git push origin "MyBranch"  
 
 ### 공지사항
-Directory가 아닌 Branch를 통해 협업
-$ git branch mingyeom
-$ git checkout mingyeom
+Directory가 아닌 Branch를 통해 협업  
+$ git branch mingyeom  
+$ git checkout mingyeom  
