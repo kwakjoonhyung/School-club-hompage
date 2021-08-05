@@ -7,7 +7,7 @@
 
 ## 개발 환경 설정
 
-**1. bitnami 혹은 xampp 설치   **
+**1. bitnami 혹은 xampp 설치**  
 **2. git clone 후 git 명령어를 통해 로컬과 원격 코드 공유**
    $ git clone https://github.com/MingyeomKim/webgrus_project.git  
    $ git init  
