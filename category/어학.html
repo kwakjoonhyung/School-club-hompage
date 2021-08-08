@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="vue.css">
+    <title>TEST!!</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <div class="title-container">
+        <div>
+          <h3 class="title">
+            어학
+          </h3>
+        </div>
+        <div class="filters">
+          <span class="filter" v-bind:class="{ active: currentFilter === '전체' }" v-on:click="setFilter('전체')">전체</span>
+          <span class="filter" v-bind:class="{ active: currentFilter === '영어' }" v-on:click="setFilter('영어')">영어</span>
+          <span class="filter" v-bind:class="{ active: currentFilter === '일본어' }" v-on:click="setFilter('일본어')">일본어</span>
+          <span class="filter" v-bind:class="{ active: currentFilter === '국제문화' }" v-on:click="setFilter('국제문화')">국제문화</span>
+          <span class="filter" v-bind:class="{ active: currentFilter === '연구/발표' }" v-on:click="setFilter('연구/발표')">연구/발표</span>
+        </div>
+      </div>
+    
+      <transition-group class="projects" name="projects" >
+        <div class="project" v-if="currentFilter === project.category || currentFilter === '전체'" v-bind:key="project.title" v-for="project in projects">
+          <div class="project-image-wrapper">
+            <img class="project-image" v-bind:src="project.image">
+            <div class="gradient-overlay"></div>
+            <div class="circle">
+              <span class="project-title">{{project.title}}</span>
+            </div>
+          </div>
+        </div>
+      </transition-group>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      var app=new Vue({
+   el: '#app',
+   data: {
+      currentFilter: '전체',
+      projects: [
+        {title: "알파카이", image: "사진/어학/알파카이.jpg", category: '영어'},
+        {title: "A.L.A", image: "사진/어학/1.jpg", category: '영어'},
+        {title: "Open Seasame", image: "사진/어학/Open Seasame.jpg", category: '영어'},
+        {title: "가이와", image: "사진/어학/가이와.jpg", category: '일본어'},
+        {title: "AZIT", image: "사진/어학/AZIT.jpg", category: '국제문화'},
+        {title: "인하스피치", image: "사진/어학/인하스피치.jpg", category: '연구/발표'},
+        {title: "TIME 연구회", image: "사진/어학/TIME 연구회.jpg", category: '연구/발표'},
+      ]
+   },
+   methods: {
+      setFilter: function(filter) {
+         this.currentFilter = filter;
+      }
+   }
+})
+    </script>
+    
+  </body>
+</html>
