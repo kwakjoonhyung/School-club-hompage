@@ -15,26 +15,31 @@
                 <label for="id">아이디</label>
             </div>
             <div class="int-area">
-                <input type="비밀번호" name="pw" id="pw" autocomplete="off" required>
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
                 <label for="pw">비밀번호</label>
             </div>
             <div class="int-area">
-                <input type="비밀번호 확인" name="pw" id="pw" autocomplete="off" required>
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
                 <label for="pwcheck">비밀번호 확인</label>
             </div>
             <div class="int-area">
-                <input type="이름" name="pw" id="pw" autocomplete="off" required>
+                <input type="text" name="pw" id="pw" autocomplete="off" required>
                 <label for="name">이름</label>
             </div>
             <div class="int-area">
-                <input type="닉네임" name="pw" id="pw" autocomplete="off" required>
+                <input type="text" name="pw" id="pw" autocomplete="off" required>
                 <label for="nickname">닉네임</label>
             </div>
-                <label><input type="radio" name="fruit" value="여자"> 여자</label>
-                <label><input type="radio" name="fruit" value="남자"> 남자</label>
-            <div class="int-area">
-                <input type="회원분류" name="pw" id="pw" autocomplete="off" required>
-                <label for="membership classification">회원분류</label>
+            <div class="int-area2">
+                <label class="sex-label">성별</label>
+                <label><input type="radio" name="sex" id="pw" value="man">남자</label>
+                <label><input type="radio" name="sex" id="pw" value="woman">여자</label>
+            </div>
+                
+            <div class="int-area2">
+                <label class="sex-label">회원분류</label>
+                <label><input type="radio" name="type" id="pw" value="member">동아리원</label>
+                <label><input type="radio" name="type" id="pw" value="president">동아리장</label>
             </div>
             <div class="btn-area">
                 <button id="btn" type="submit">완료</button>
