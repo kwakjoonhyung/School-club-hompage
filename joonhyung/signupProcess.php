@@ -18,7 +18,7 @@ if ($result === false) {
 ?>
     <script>
         alert("회원가입이 완료되었습니다");
-        location.href = "index.php";
+        location.href = "./index.php";
     </script>
 <?php
 }

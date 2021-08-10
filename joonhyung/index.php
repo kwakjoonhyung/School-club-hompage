@@ -19,7 +19,7 @@ session_start();
 			?>
 			<div id="login_box">
 				<h1>로그인</h1>
-					<form method="POST" action="/loginProcess.php">
+					<form method="POST" action="./loginProcess.php">
 						<table align="center" border="0" cellspacing="0" width="300">
 		        			<tr>
 		            			<td width="130" colspan="1">
@@ -36,7 +36,7 @@ session_start();
 		        		</tr>
 		        		<tr>
 		           		<td colspan="3" align="center" class="mem">
-		              	<a href="/signup.php">회원가입 하시겠습니까?</a>
+		              	<a href="./signup.php">회원가입 하시겠습니까?</a>
 		           		</td>
 		        		</tr>
 		    		</table>
@@ -51,7 +51,7 @@ session_start();
 					console.log("hello");
 					const data = confirm("로그아웃 하시겠습니까?");
 					if (data) {
-							location.href = "logoutProcess.php";
+							location.href = "./logoutProcess.php";
 					}
 
 			}

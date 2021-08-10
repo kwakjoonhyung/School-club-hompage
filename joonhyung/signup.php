@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="signupProcess.php" method="POST" id="signup-form">
+    <form action="./signupProcess.php" method="POST" id="./signup-form">
         <div class="w-50 ml-auto mr-auto mt-5">
         <div class="mb-3 ">
                 <label for="id" class="form-label">아이디</label>
