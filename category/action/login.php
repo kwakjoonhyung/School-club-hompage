@@ -1,8 +1,12 @@
 <?php
-session_start();
+include('db.php');
 
-$connect = mysqli_connect('27.96.129.65', 'aaa', '1234', 'web_project', '3306');
+$conn = mysqli_connect($hostname, $username, $password, $database, $port);
 
+$id = $_POST["id"];
+$password = $_POST["password"];
+
+$query = "SELECT* FROM member WHERE id = '$id'";
 
 mysqli_close($connect);
 ?>

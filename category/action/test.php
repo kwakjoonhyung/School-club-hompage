@@ -1,12 +1,6 @@
 <?php
 
-session_start();
-
-$hostname = '27.96.129.65';
-$username = 'aaa';
-$password = '1234';
-$database = 'web_project';
-$port = 3306;
+include('db.php');
 
 $conn = mysqli_connect($hostname, $username, $password, $database, $port);
 

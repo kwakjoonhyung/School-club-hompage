@@ -12,7 +12,7 @@
     $type = $_POST["type"];
     // 변수 설정
 
-    $query = "insert into member(member_id, member_password, member_name, member_nickname, member_sex, member_privilege) values ('$id', '$pw', '$name', '$nickname', '$sex', '$type')";   
+    $query = "INSERT into member(member_id, member_password, member_name, member_nickname, member_sex, member_privilege) VALUES ('$id', '$pw', '$name', '$nickname', '$sex', '$type')";   
     
     $result = $connect -> query($query);
     
