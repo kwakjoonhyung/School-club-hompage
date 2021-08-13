@@ -8,5 +8,6 @@ $password = $_POST["password"];
 
 $query = "SELECT* FROM member WHERE id = '$id'";
 
+
 mysqli_close($connect);
 ?>

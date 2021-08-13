@@ -17,6 +17,6 @@ if($conn->query($query)){
     echo 'fail to inserting';
 }
 
-// mysqli_close($connect);
+mysqli_close($connect);
 
  ?>
