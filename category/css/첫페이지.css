@@ -1,4 +1,4 @@
-css
+
 *{
   padding: 0;
   margin: 0;
@@ -92,34 +92,27 @@ a.active,a:hover{
     left: 0;
   }
 }
-#contaner {
-  width: 65%;
+#container {
+  width: 100%;
   margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 #box-1 {
-  position: absolute;
-  top: 665px;
-  left: 1px;
-  float: left;
-  width: 33.3%;
+  margin-right: 0%;
+  width: 30%;
   height: 300px;
   outline: 1px solid #0082e6;
 }
 #box-2 {
-  position: absolute;
-  top: 665px;
-  left: 641px;
-  float: left;
-  width: 33.3%;
+
+  width: 30%;
   height: 300px;
   outline: 1px solid #0082e6;
 }
 #box-3 {
-  position: absolute;
-  top: 665px;
-  left: 1281px;
-  float: left;
-  width: 33.3%;
+
+  width: 30%;
   height: 300px;
   outline: 1px solid #0082e6;
 }
@@ -184,9 +177,7 @@ a.active,a:hover{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
