@@ -1,33 +1,27 @@
 <?php
-    session_start();
+    include('./db.php');
 
-    $connect = mysqli_connect();
-    // db 정보 입력하기 
+    $conn = mysqli_connect($hostname, $username, $password, $database);
 
     $id = $_POST["id"];
     $pw = $_POST["pw"];
     $name = $_POST['_name'];
     $nickname = $_POST["nickname"];
     $sex = $_POST["sex"];
-    $type = $_POST["type"];
+    $privilege = $_POST["type"];
     // 변수 설정
 
-    $query = "INSERT into member(member_id, member_password, member_name, member_nickname, member_sex, member_privilege) VALUES ('$id', '$pw', '$name', '$nickname', '$sex', '$type')";   
-    
-    $result = $connect -> query($query);
-    
+    $query = "INSERT into member(id, password, name, nickname, sex, privilege) VALUES ('$id', '$pw', '$name', '$nickname', '$sex', '$privilege')";
 
-    if($result){
-        ?>
-        <script>
-        alert('가입 되었습니다.\n로그인 화면으로 이동합니다.'); 
-        location.replace("./login.php");
-        </script>
-<?php   }
-    else{
-        ?> <script>
-            alert("fail");
-            </script>
-<?php   }
+    $result = mysqli_query($conn, $query);
+    if($result){ // insert 쿼리 성공 시
+      echo "<script>alert('success inserting');</script>";
+        sleep(5);
+        header("Location: ../html/로그인.html");
+    } else {
+        echo "<script>alert ('fail to inserting');</script>";
+        sleep(5);
+        header("Location: ../html/회원가입.html");
+    }
         mysqli_close($connect);
 ?>

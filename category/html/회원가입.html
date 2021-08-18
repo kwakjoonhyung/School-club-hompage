@@ -22,6 +22,7 @@
                 <input type="password" name="pw" id="pw" autocomplete="off" required>
                 <label for="pwcheck">비밀번호 확인</label>
             </div>
+
             <div class="int-area">
                 <input type="text" name="_name" id="_name" autocomplete="off" required>
                 <label for="name">이름</label>
@@ -35,7 +36,7 @@
                 <label><input type="radio" name="sex" id="pw" value="man">남자</label>
                 <label><input type="radio" name="sex" id="pw" value="woman">여자</label>
             </div>
-                
+
             <div class="int-area2">
                 <label class="sex-label">회원분류</label>
                 <label><input type="radio" name="type" id="type" value="member">동아리원</label>
@@ -44,14 +45,14 @@
             <div class="btn-area">
                 <button id="btn" type="submit">완료</button>
             </div>
-        </form>   
+        </form>
     </section>
 
 <script>
         let id = $('#id');
         let pw = $('#pw');
         let btn = $('#btn');
-    
+
         $(btn).on('click', function() {
             if($(id).val() == "") {
                 $(id).next('label').addClass('warning');

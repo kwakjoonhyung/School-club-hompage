@@ -9,6 +9,9 @@
     </style>
   </head>
   <body>
+    <?php 
+      session_start();
+      ?>
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -16,11 +19,18 @@
       </label>
       <label class="logo">INHA</label>
       <ul>
-        <li><a href="#">Home</li>
+        <li><a href="첫페이지.php">Home</li>
         <li><a href="#">About</li>
         <li><a href="#">Services</li>
         <li><a href="#">Contact</li>
-        <li><a href="#">Login</li>
+        <?php 
+          if(!isset($_SESSION['id'])){
+            ?> <li><a href="로그인.html">Login</li>
+            <?php
+          } else{
+            ?><li><a href = "./로그아웃.php">로그아웃</li> <?php
+          }
+        ?>
       </ul>
     </nav>
     <div id="container">
@@ -36,11 +46,7 @@
         </div>
       </div>
       <div id="box-2" class="box">마감기한이 얼마 남지 않은 동아리를 확인하러 가보세요<br></br><br>
-<<<<<<< HEAD
-        <button class="styled" type="button"  >
-=======
-        <button class="styled" type="button">
->>>>>>> d71fbbe9aa1cbb38b3b65cb2547ae0d519839945
+        <button class="styled" type="button"  onclick = "location.href=''">
                 <i class="fas fa-arrow-right"></i>
         </button>
       </div>
@@ -50,11 +56,7 @@
       <div class="search">
         <input type="text" class="searchTerm" placeholder="관심있는 분야를 검색하세요.">
         <button type="submit" class="searchButton">
-<<<<<<< HEAD
           <i class="fa fa-search"></i> 
-=======
-          <i class="fa fa-search"></i>
->>>>>>> d71fbbe9aa1cbb38b3b65cb2547ae0d519839945
        </button>
       </div>
   </div>

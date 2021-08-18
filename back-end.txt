@@ -8,7 +8,7 @@ DB 연결 정보
 2) 아래 정보로 putty에서 원격 서버에 접속하기
 ❗<Putty 서버 연결 방법>
 1. Host Name (IP주소) : 27.96.129.65
-2. Port : 3306
+2. Port : 3306 -> 10020으로 수정
 3. Saved Session : 임의로 지정 ex)test
 Save버튼 누르고 지정한 세션 선택한 뒤 Open
 
