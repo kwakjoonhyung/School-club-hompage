@@ -1,0 +1,30 @@
+전달 사항
+1. 마감기한이 얼마남지 않은 동아리 띄워주는 페이지(버튼 눌렀을 때 어디로 이동하는지?)
+
+
+DB 연결 정보
+1) putty 설치하기
+
+2) 아래 정보로 putty에서 원격 서버에 접속하기
+❗<Putty 서버 연결 방법>
+1. Host Name (IP주소) : 27.96.129.65
+2. Port : 3306 -> 10020으로 수정
+3. Saved Session : 임의로 지정 ex)test
+Save버튼 누르고 지정한 세션 선택한 뒤 Open
+
+id : root
+password : G3$HrL=FMHt
+
+3) 'mysql -u aaa -p' 명령어로 DB 접속한 다음 (비밀번호 1234) test 테이블 내부 정보 확인하고 INSERT 쿼리 날리기(아래는 상세 코드, putty에서 작업하면 된다!)
+> mysql -u aaa -p
+> show databases;
+> use web_project;
+> show tables;
+> DESC test;
+> INSERT INTO test(name, age) VALUES ("gyeomi", 21);
+이렇게!!
+4) Workbench에서 원격 DB 연결하기 (사진 참고)
+
+mysql root 비밀번호 : family0831!
+
+grant all privileges on *.* to 'aaa'@'211.235.39.51' identified by '1234'

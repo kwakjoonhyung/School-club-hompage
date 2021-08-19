@@ -5,7 +5,7 @@
                 $title = $_GET['title'];
                 $content = $_GET['content'];
                 $date = date('Y-m-d H:i:s');
-
+`               $deadline = 
                 $URL = './index3.php';
 
                 $query = "insert into board2 (number,title, content, date, hit, id)

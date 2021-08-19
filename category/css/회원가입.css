@@ -8,7 +8,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    background: url("사진/인하대사진.jpg") no-repeat center;
+=======
     background: url("../사진/인하대사진.jpg") no-repeat center;
+>>>>>>> d71fbbe9aa1cbb38b3b65cb2547ae0d519839945
+=======
+    background: url("../사진/인하대사진.jpg") no-repeat center;
+>>>>>>> b865c7a9fb52a3cc3d4de66554d79c599ab2e5c0
     background-size: cover;
 }
 body::before {
