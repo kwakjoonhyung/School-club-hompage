@@ -148,18 +148,22 @@ ul li a{
   margin-right: 0%;
   width: 30%;
   height: 300px;
-  outline: 1px solid #0082e6;
+  background-color: rgb(202, 202, 202);
+  
 }
 #box-2 {
   width: 30%;
   height: 300px;
-  outline: 1px solid #0082e6;
+  background-color: rgb(218, 218, 218);
+
+  
 }
 #box-3 {
 
   width: 30%;
   height: 300px;
-  outline: 1px solid #0082e6;
+  background-color: rgb(247, 247, 247);
+  
 }
 .box{
   font-size: 30px;
@@ -208,11 +212,34 @@ ul li a{
   margin-bottom: 20%;
 }
 
+.logologo{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  top: 10px;
+}
+
+.logologo img{
+  width: 10vh; 
+  object-fit: cover;
+  top:2vh;
+  display:block
+}
+.logologo p{
+  text-align: center; 
+  border-top: black 1px solid; 
+  padding:5px; 
+  margin-top: 20%;
+  font-weight: bold;
+
+}
+
 .searchTerm:focus{
   color: #0082e6;
 }
 
 .searchButton {
+  height: 76px;
   width: 40px;
   border: 1px solid #0082e6;
   background: #0082e6;
