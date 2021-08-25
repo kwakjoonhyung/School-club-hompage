@@ -21,17 +21,21 @@ label.logo{
   padding: 0 100px;
   font-weight: bold;
 }
-nav ul{
+ul{
   float: right;
   margin-right: 20px;
 }
-nav ul li{
+.left-ul{
+  float: left;
+  margin-left: 20px;
+}
+ul li{
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a{
-  color: white;
+ul li a{
+
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
