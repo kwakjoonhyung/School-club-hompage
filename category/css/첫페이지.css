@@ -29,22 +29,61 @@ ul{
   float: left;
   margin-left: 20px;
 }
+.left-ul li{
+  display: inline-block; 
+  position: relative;
+}
+.left-ul li:after{
+  content:"";
+  width: 0;
+  height: 50%;
+  display: inline-block;
+  background: #9aa9ff;
+  position: absolute;
+  bottom:27%;
+  left:0;
+  z-index:-1;
+  transition: 0.2s all;
+}
+.left-ul li:hover:after{
+  width: 100%;
+}
+
+.right-ul li{
+  display: inline-block; 
+  position: relative;
+}
+.right-ul li:after{
+  content:"";
+  width: 0;
+  height: 50%;
+  display: inline-block;
+  background: #9aa9ff;
+  position: absolute;
+  bottom:27%;
+  left:0;
+  z-index:-1;
+  transition: 0.2s all;
+}
+.right-ul li:hover:after{
+  width: 100%;
+
+}
 ul li{
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
 ul li a{
-
-  font-size: 17px;
+  color:black;
+  font-size: 20px;
   padding: 7px 13px;
   border-radius: 3px;
-  text-transform: uppercase;
 }
-a.active,a:hover{
+/* a.active,a:hover{
   background: #1b9bff;
   transition: .5s;
-}
+} */
 .checkbtn{
   font-size: 30px;
   color: white;
@@ -70,7 +109,7 @@ a.active,a:hover{
   .checkbtn{
     display: block;
   }
-  ul{
+  /* ul{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -79,23 +118,25 @@ a.active,a:hover{
     left: -100%;
     text-align: center;
     transition: all .5s;
-  }
-  nav ul li{
+  } */
+  /* nav ul li{
     display: block;
     margin: 50px 0;
     line-height: 30px;
-  }
-  nav ul li a{
+  } */
+  /* nav ul li a{
     font-size: 20px;
-  }
-  a:hover,a.active{
+  } */
+  /* a:hover,a.active{
     background: none;
     color: #0082e6;
-  }
+  } */
   #check:checked ~ ul{
     left: 0;
   }
 }
+
+/* 밑 박스 3개 */
 #container {
   width: 100%;
   margin: 20px auto;
@@ -126,6 +167,8 @@ a.active,a:hover{
 #동아리{
   text-align: left
 }
+
+/* //마감기한 밑 화살표 */
 .styled {
     border: 0;
     line-height: 2.5;
