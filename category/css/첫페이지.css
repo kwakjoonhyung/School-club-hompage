@@ -13,6 +13,7 @@ nav{
   background: #0082e6;
   height: 80px;
   width: 100%;
+  position: relative;
 }
 label.logo{
   color: white;
