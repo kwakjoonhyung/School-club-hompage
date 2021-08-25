@@ -22,7 +22,7 @@ label.logo{
   padding: 0 100px;
   font-weight: bold;
 }
-ul{
+.right-ul{
   float: right;
   margin-right: 20px;
 }
@@ -33,6 +33,7 @@ ul{
 .left-ul li{
   display: inline-block; 
   position: relative;
+  line-height: 80px;
 }
 .left-ul li:after{
   content:"";
@@ -53,6 +54,7 @@ ul{
 .right-ul li{
   display: inline-block; 
   position: relative;
+  line-height: 80px;
 }
 .right-ul li:after{
   content:"";
@@ -70,11 +72,7 @@ ul{
   width: 100%;
 
 }
-ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
+
 ul li a{
   color:black;
   font-size: 1.5vw;
@@ -147,13 +145,22 @@ ul li a{
 #box-1 {
   margin-right: 0%;
   width: 30%;
-  height: 300px;
+  height: 400px;
   background-color: rgb(202, 202, 202);
-  
+  text-align: center;
+}
+
+.top{
+  padding-top: 30px;
+  text-align: left;
+}
+.top li{
+  padding-top: 10px;
+  padding-left: 10px;
 }
 #box-2 {
   width: 30%;
-  height: 300px;
+  height: 400px;
   background-color: rgb(218, 218, 218);
 
   
@@ -161,7 +168,7 @@ ul li a{
 #box-3 {
 
   width: 30%;
-  height: 300px;
+  height: 400px;
   background-color: rgb(247, 247, 247);
   
 }
