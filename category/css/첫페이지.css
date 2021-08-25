@@ -182,6 +182,10 @@ ul li a{
 
 /* //마감기한 밑 화살표 */
 .styled {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:80%;
     border: 0;
     line-height: 2.5;
     padding: 0 30px;
