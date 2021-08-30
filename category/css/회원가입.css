@@ -10,6 +10,7 @@ body {
     height: 100vh;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     background: url("사진/인하대사진.jpg") no-repeat center;
 =======
     background: url("../사진/인하대사진.jpg") no-repeat center;
@@ -17,6 +18,9 @@ body {
 =======
     background: url("../사진/인하대사진.jpg") no-repeat center;
 >>>>>>> b865c7a9fb52a3cc3d4de66554d79c599ab2e5c0
+=======
+    background: url("../사진/인하대사진.jpg") no-repeat center;
+>>>>>>> front-end
     background-size: cover;
 }
 body::before {
