@@ -55,6 +55,17 @@
     	<input type="submit" value="수정" class="btn" onclick="updateInfoConfirm();">
     	<input type="reset" value="취소" class="btn" onclick="javascript:window.location='main.jsp'">
     </form>
+
+	<script>
+		updateInfoConfirm = () => {
+			<?php
+				include ('./category/action/db.php');
+				$conn = mysqli_connect($hostname, $username, $password, $database);
+
+			?>
+
+		}
+	</script>
 </div>    
 </body>
 </html>
