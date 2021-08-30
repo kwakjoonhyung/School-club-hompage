@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../css/vue.css">
+    <title>TEST!!</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <div class="title-container">
+        <div>
+          <h3 class="title">
+            봉사
+          </h3>
+        </div>
+        <div class="filters">
+			<span class="filter" v-bind:class="{ active: currentFilter === '전체' }" v-on:click="setFilter('전체')">전체</span>
+      <span class="filter" v-bind:class="{ active: currentFilter === '아동봉사' }" v-on:click="setFilter('아동봉사')">아동봉사</span>
+      <span class="filter" v-bind:class="{ active: currentFilter === '유기봉사' }" v-on:click="setFilter('유기봉사')">유기봉사</span>
+      <span class="filter" v-bind:class="{ active: currentFilter === '복지관' }" v-on:click="setFilter('복지관')">복지관</span>
+      <span class="filter" v-bind:class="{ active: currentFilter === '집수리' }" v-on:click="setFilter('집수리')">집수리</span>
+      <span class="filter" v-bind:class="{ active: currentFilter === '기타' }" v-on:click="setFilter('기타')">기타</span>         
+    </div>
+      </div>
+    
+      <transition-group class="projects" name="projects" >
+        <div class="project" v-if="currentFilter === project.category || currentFilter === '전체'" v-bind:key="project.title" v-for="project in projects">
+          <div class="project-image-wrapper">
+            <img class="project-image" v-bind:src="project.image">
+            <div class="gradient-overlay"></div>
+            <div class="circle">
+              <span class="project-title">{{project.title}}</span>
+            </div>
+          </div>
+        </div>
+      </transition-group>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      var app=new Vue({
+   el: '#app',
+   data: {
+      currentFilter: '전체',
+      projects: [
+	  	  {title: "개구장이", image: "https://picsum.photos/g/200?image=122", category: '아동봉사'},
+        {title: "파파", image: "https://picsum.photos/g/200?image=122", category: '아동봉사'},
+        {title: "MRA", image: "https://picsum.photos/g/200?image=116", category: '아동봉사'},
+        {title: "인하브로드", image: "https://picsum.photos/g/200?image=121", category: '아동봉사'},
+        {title: "하룡회", image: "https://picsum.photos/g/200?image=121", category: '아동봉사'},
+        {title: "사랑해줄개", image: "https://picsum.photos/g/200?image=121", category: '유기봉사'},
+        {title: "심성회", image: "https://picsum.photos/g/200?image=133", category: '복지관'},
+        {title: "아해누리", image: "https://picsum.photos/g/200?image=133", category: '복지관'},
+        {title: "트인", image: "https://picsum.photos/g/200?image=133", category: '집수리'},
+        {title: "로타랙트", image: "https://picsum.photos/g/200?image=133", category: '기타'},
+        {title: "용마루", image: "https://picsum.photos/g/200?image=133", category: '기타'},
+        {title: "대우회/JOA", image: "https://picsum.photos/g/200?image=133", category: '기타'},
+        {title: "RCY", image: "https://picsum.photos/g/200?image=133", category: '기타'},
+      ]
+   },
+   methods: {
+      setFilter: function(filter) {
+         this.currentFilter = filter;
+      }
+   }
+})
+    </script>
+    
+  </body>
+</html>
