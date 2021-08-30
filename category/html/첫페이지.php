@@ -18,17 +18,25 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">INHA</label>
-      <ul style = "text-aling: right;">
+      <ul class ="sidebar">
         <li><a href="첫페이지.php">Home</li>
         <li><a href="#">About</li>
         <li><a href="#">Services</li>
         <li><a href="#">Contact</li>
         <?php 
           if(!isset($_SESSION['id'])){
-            ?> <li style="padding: 15px;"><a href="#" style="color: white; font-size: 25px;"><a href="로그인.html">Login</li>
+            ?> <li><a href="./로그인/로그인.html" >Login</li>
             <?php
           } else{
-            ?><li><a href = "./로그아웃.php">로그아웃</li> <?php
+            $id = $_SESSION['id'];
+            $name = $_SESSION['name'];
+            ?><li><a href = "./로그인/logout.php">Logout</li>
+            <li>
+              <?php
+              echo "<strong>$name</strong>($id)님 환영합니다.";
+              ?>
+            </li>
+             <?php
           }
         ?>
       </ul>
@@ -78,21 +86,6 @@
           <li>5.동아리</li>
           </ul>
       </div>
-<<<<<<< HEAD:category/html/첫페이지.php
-      <div id="box-2" class="box">마감기한이 얼마 남지 않은 동아리를 확인하러 가보세요<br></br><br>
-        <button class="styled" type="button"  onclick = "location.href=''">
-                <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-      <div id="box-3" class="box">My calender</div>
-    </div>
-    <div class="wrap">
-      <div class="search">
-        <input type="text" class="searchTerm" placeholder="관심있는 분야를 검색하세요.">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i> 
-       </button>
-=======
       <div id="box-2" class="box">
         <div style="height: 300px;">
           넣을내용
@@ -110,8 +103,6 @@
         <img src="../사진/인하대사진.jpg"  style="width: 30%; margin: 5px;">
         <img src="../사진/인하대사진.jpg"  style="width: 30%; margin: 5px;">
         
-        
->>>>>>> front-end:category/html/첫페이지.html
       </div>
       
       </div>

@@ -20,7 +20,7 @@ if(mysqli_num_rows($result)){ // 아이디가 있다면
             ?>
             <script>
                 alert('login success');
-                location.replace('../html/첫페이지.php');
+                location.replace('../첫페이지.php');
             </script> <?php
         } else{
             echo "session failed";

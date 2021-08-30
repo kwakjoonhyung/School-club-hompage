@@ -70,3 +70,7 @@ body::before {
     border-radius: 25px;
     cursor: pointer;
 }
+.caption1{
+    font : white;
+    font-size : 15px;
+}

@@ -137,7 +137,7 @@ ul li a{
 
 /* 밑 박스 3개 */
 #container {
-  width: 100%;
+  width: 100;
   margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
@@ -265,4 +265,7 @@ ul li a{
   margin-top: 15%;
   margin-left: 20%;
   margin-right: 20%;
+}
+.sidebar{
+  /* text-align: right; */
 }
