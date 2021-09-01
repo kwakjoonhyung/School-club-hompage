@@ -75,7 +75,7 @@ label.logo{
 
 ul li a{
   color:black;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   padding: 7px 13px;
   border-radius: 3px;
 }
@@ -223,23 +223,25 @@ ul li a{
 }
 
 .logologo{
+  width: 15vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%); 
-  top: 10px;
+  top: 4%;
+  text-align: center;
 }
 
 .logologo img{
-  width: 10vh; 
+  width: 6vw; 
   object-fit: cover;
   top:2vh;
-  display:block
+  text-align: center;
 }
 .logologo p{
   text-align: center; 
   border-top: black 1px solid; 
   padding:5px; 
-  margin-top: 20%;
+  margin-top: 10%;
   font-weight: bold;
 
 }
