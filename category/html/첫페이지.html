@@ -43,11 +43,23 @@
     
 
     <div class="wrap">
-      <div class="search">
-        <input type="text" class="searchTerm" placeholder="관심있는 분야를 검색하세요.   (ex. 밴드, 코딩)">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
+      <div id="search">
+        <form method="GET" action="검색처리.html" id="llll">
+          
+          <div id="tag-list">
+          
+          
+            <input id="tag" type="text" class="searchTerm" placeholder="태그를 입력하고 스페이스바를 쳐주세요">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+  
+        </div>
+
+        </form>
+        
+        <!-- <input type="text" class="searchTerm" placeholder="관심있는 분야를 검색하세요.   (ex. 밴드, 코딩)"> -->
+        
       </div>
   </div>
 
@@ -85,6 +97,7 @@
       
       </div>
     </div>
+    <script src="../tag.js"></script>
 
 
   </body>
