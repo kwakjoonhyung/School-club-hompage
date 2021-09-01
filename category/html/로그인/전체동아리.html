@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../css/vue.css">
+    <title>TEST!!</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <div class="title-container">
+        <div>
+          <h3 class="title">
+            전체
+          </h3>
+        </div>
+        <div class="filters">
+         <span class="filter" v-bind:class="{ active: currentFilter === '전체' }" v-on:click="setFilter('전체')">전체</span>
+        </div>
+      </div>
+    
+      <transition-group class="projects" name="projects" >
+        <div class="project" v-if="currentFilter === project.category || currentFilter === '전체'" v-bind:key="project.title" v-for="project in projects">
+          <div class="project-image-wrapper">
+            <img class="project-image" v-bind:src="project.image">
+            <div class="gradient-overlay"></div>
+            <div class="circle">
+              <span class="project-title">{{project.title}}</span>
+            </div>
+          </div>
+        </div>
+      </transition-group>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      var app=new Vue({
+   el: '#app',
+   data: {
+      currentFilter: '전체',
+      projects: [
+        {title: "극단,봄", image: "../../사진/공연/극단,봄.jpg", category: '전체'},
+        {title: "인하극예술연구회", image: "../../사진/공연/인하극예술연구회.jpg", category: '전체'},
+        {title: "개로", image: "../../사진/공연/개로.jpg", category: '전체'},
+        {title: "꼬망스", image: "../../사진/공연/꼬망스.jpg", category: '전체'},
+        {title: "노래사랑", image: "../../사진/공연/노래사랑.jpg", category: '전체'},
+        {title: "인하합창단", image: "../../사진/공연/인하합창단.jpg", category: '전체'},
+        {title: "고전기타회", image: "../../사진/공연/고전기타회.jpg", category: '전체'},
+        {title: "인하오케스트라", image: "../../사진/공연/인하오케스트라.jpg", category: '전체'},
+        {title: "인하배소리", image: "../../사진/공연/인하배소리.jpg", category: '전체'},
+        {title: "인하인의 피아노 사랑", image: "../../사진/공연/인하인의 피아노 사랑.jpg", category: '전체'},
+        {title: "FLAGON", image: "../../사진/공연/FLAGON.jpg", category: '전체'},
+        {title: "INDKY", image: "../../사진/공연/INDKY.jpg", category: '전체'},
+        {title: "POP MUSIC", image: "../../사진/공연/POP MUSIC.jpg", category: '전체'},
+        {title: "트리키", image: "../../사진/공연/트리키.jpg", category: '전체'},
+        {title: "F.L.EX.", image: "../../사진/공연/F.L.EX..jpg", category: '전체'},
+        {title: "판타스틱스테이션", image: "../../사진/공연/판타스틱스테이션.jpg", category: '전체'},
+        {title: "풍물사랑", image: "../../사진/공연/풍물사랑.jpg", category: '전체'},
+
+        {title: "라품", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "러브올", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "마농", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "볼링부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "비룡야구부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "셔틀콕", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "여자축구동아리 INHA-WICS", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "인하fc", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "에이스리베로", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "Inha Teal Dragons", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "테니스부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+
+        {title: "인하벤처클럽", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "아세스", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "풍물패(단과대별)", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+
+        {title: "인하라이더", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "이카루스", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "탈라리아", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "SKIN-SCUBA", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하대 조정부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하스키부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "산악부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "수영부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "스노우보드동아리", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+
+        {title: "검도부", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "바크로바틱소울즈", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "COMBATE", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "인하대학교 태권도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하암즈", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하유도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "IBF", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+
+        {title: "개구장이", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "파파", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "MRA", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "인하브로드", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "하룡회", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "사랑해줄개", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "심성회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "아해누리", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "트인", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "로타랙트", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "용마루", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "대우회/JOA", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "RCY", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+
+        {title: "독서 삼매경", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "소네팅", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "씨앗", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "인액터스", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "페다고지", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "TEDxInhaU", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+
+        {title: "알파카이", image: "../../사진/어학/알파카이.jpg", category: '전체'},
+        {title: "A.L.A", image: "../../사진/어학/1.jpg", category: '전체'},
+        {title: "Open Seasame", image: "../../사진/어학/Open Seasame.jpg", category: '전체'},
+        {title: "가이와", image: "../../사진/어학/가이와.jpg", category: '전체'},
+        {title: "AZIT", image: "../../사진/어학/AZIT.jpg", category: '전체'},
+        {title: "인하스피치", image: "../../사진/어학/인하스피치.jpg", category: '전체'},
+        {title: "TIME 연구회", image: "../../사진/어학/TIME 연구회.jpg", category: '전체'},
+
+        {title: "나래", image: "../../사진/연구/나래.jpg", category: '전체'},
+        {title: "로보트연구회", image: "../../사진/연구/로보트연구회.jpg", category: '전체'},
+        {title: "별지기", image: "../../사진/연구/별지기.jpg", category: '전체'},
+        {title: "보동보동", image: "../../사진/연구/보동보동.jpg", category: '전체'},
+        {title: "산하사랑", image: "../../사진/연구/산하사랑.jpg", category: '전체'},
+        {title: "아이디어 뱅크", image: "../../사진/연구/아이디어 뱅크.jpg", category: '전체'},
+        {title: "인하공방", image: "../../사진/연구/인하공방.jpg", category: '전체'},
+        {title: "인컴", image: "../../사진/연구/인컴.jpg", category: '전체'},
+        {title: "NETers", image: "../../사진/연구/NETers.jpg", category: '전체'},
+        {title: "인하 기우회", image: "../../사진/연구/인하 기우회.jpg", category: '전체'},
+        {title: "인하로케트연구회", image: "../../사진/연구/인하로케트연구회.jpg", category: '전체'},
+        {title: "I.C.C", image: "../../사진/연구/I.C.C.jpg", category: '전체'},
+
+        {title: "메이커", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "양현재", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "화우회", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "ADGON", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "등대", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "만화촌", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하문학회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "IMAGE", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "샘 동인회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+
+        {title: "네이게이토", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "민족기독학생회", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "CAM", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "CCC", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "C.F.M", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "ESF", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "IVF", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "JDM", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "JOY 선교회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "불교학생회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "인하가톨릭학생회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "SFC", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+      ]
+   },
+   methods: {
+      setFilter: function(filter) {
+         this.currentFilter = filter;
+      }
+   }
+})
+    </script>
+    
+  </body>
+</html>
