@@ -7,18 +7,38 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="data">
+
+
+    </div>
     <script>
+        function printer(texttoadd){
+        var node=document.createElement("div");
+        var textnode=document.createTextNode(texttoadd);
+        node.appendChild(textnode);
+        document.getElementById("data").appendChild(node);
+    }
+
+
         if(localStorage.getItem("taglistsize")){
     let taglistsize=localStorage.getItem("taglistsize");
     //localstorage에 저장된 값 가져오는 코드
     
-    for(i=1;i<=taglistsize;i++){
+    for(i=1;i<taglistsize;i++){
         console.log(localStorage.getItem(i));
+       printer(localStorage.getItem(i));
     }
+
+    
+
+    printer();
+    
     //가져온 후 localstrage를 초기화 하는 코드
     localStorage.clear();
 }
     </script>
+
+
 
     
 </body>
