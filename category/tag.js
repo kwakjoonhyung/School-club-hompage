@@ -56,6 +56,21 @@ const addTag = e => {
     }
 };
 
+function setLocal(){
+    for(i=1;i<=taglist.length;i++){
+        localStorage.setItem(i,taglist[i-1]);
+    }
+    localStorage.setItem("taglistsize",taglist.length);
+
+    
+    //배열 초기화
+    taglist=[];
+
+}
+
+
+
+
 const getTag = e => {
     const {keyCode, target} = e;
     const {value: tagText} = target;
