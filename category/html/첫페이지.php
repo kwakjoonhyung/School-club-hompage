@@ -9,13 +9,32 @@
     </style>
   </head>
   <body>
+    <?php
+      session_start();
+      // $c_id = $_COOKIE["c_id"];
+    ?>
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
       <ul style="text-align: right;">
-        <li style="padding: 15px;"><a href="#" style="color: white; font-size: 25px;">Log In</a></li>
+      <li style="padding: 10px;"><?php 
+          if(!isset($_SESSION['id'])){
+            ?> <li><a href="./로그인/로그인.html" style="color: white; font-size: 25px;" >Login</li>
+            <?php
+          } else{
+            $id = $_SESSION['id'];
+            $name = $_SESSION['name'];
+            ?><li><a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</li>
+            <li style = "font-size : 15px;">
+              <?php
+              echo "<strong>$name</strong>($id)님 환영합니다.";
+              ?>
+            </li>
+             <?php
+          }
+        ?></a></li>
       </ul>
       
     </nav>

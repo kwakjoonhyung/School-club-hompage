@@ -1,19 +1,51 @@
 <?php
+    session_start();
+    include('../db.php');
+    $conn = mysqli_connect($hostname, $username, $password, $database);
 
-//name이 sex인 아이디 박스에서 체크된 태그의  value값을 가져옴
-//회원가입.html파일에서 name=sex인 부분을 보면 value에 man,woman값이 각각 쓰여있어서
-//체크된 부분의 값을 가져옴. 만약 남자에 체크했다면 $sex의 값은 man이 될 것
-$sex = $_POST['sex'];
-//아래 코드로 출력해서 확인해보세여~~
-echo "$sex";
+    $id = $_POST['id'];
+    $password = $_POST["pw"];
+    $idpwSaveCheck = $_POST["idpwSaveCheck"];
+    // 체크되어있는 경우 y 값이 담김
 
-//동아리 회원/동아리장 라디오버튼 체크여부도 위와 같이 체크 가능. 그 값 기반으로 if-else문 돌리면 될듯?
+    $query = "SELECT * FROM member WHERE id = '$id'";
+    $query2 = "SELECT name FROM member WHERE id = $id";
+    $result = mysqli_query($conn, $query);
+    $name = mysqli_query($conn, $query2); // name값이 저장
+    if(mysqli_num_rows($result)){ // 아이디가 있다면
+        $row = mysqli_fetch_assoc($result);
+         //  아이디/비밀번호 저장 메소드 
+            if($idpwSaveCheck == 'y') {
+                setcookie("c_id", $id, (time()+ 3600 * 24* 30), "/");
+                echo '<script>console.log("cookie is setting"); </script>'; 
+                sleep(2);
+            }
+        if($row['password'] == $password){
+            $_SESSION['id'] = $id;
+            $_SESSION['name'] = $name;
+            if(isset($_SESSION['id'])){
+                ?>
+                <script>
+                    alert('login success');
+                    location.replace('../첫페이지.php');
+                </script> <?php
+            } else{
+                echo "session failed";
+            }
+        } else { // password가 잘못 되었을 때
+            ?> <script>
+                    alert('아이디 혹은 비밀번호가 잘못되었습니다.');
+                    history.back();
+                </script>
+    <?php }
+    } else {
+        ?> <script> 
+            alert('아이디 혹은 비밀번호가 잘못 되었습니다.');
+            history.back();
+        </script>
+        <?php
+    }
+    
+    mysqli_close($conn);
 
-
-
-
-//아래코드는 안내문 띄워주고 회원가입.html로 이동하는 코드
-//signinAction.php는 회원가입 처리(정보 받아와서 db에 저장)만 하기 때문에 처리 후 특정 페이지로 돌려보내줘야함.
-// echo "<script>alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다')</script>";
-// echo "<script>location.href='회원가입.html'</script>";
 ?>

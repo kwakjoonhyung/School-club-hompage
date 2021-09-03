@@ -1,0 +1,20 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아이디/비밀번호 찾기</title>
+    <link rel="stylesheet" href="../../css/아이디비번찾기.css">
+</head>
+<body>
+    <!-- (아이디찾기)이름을 입력하면 아이디를 반환, 없으면 없다고 alert 띄우고 회원가입 페이지로 이동 -->
+    <form action = "./findIdAction.php" method = "post">    
+    <input type = "text" name = "name" id = "name" placeholder="이름을 입력하세요">
+    <button type = "submit">아이디 찾기</button>
+    </form>
+
+    <!-- (비밀번호 찾기) 아이디를 입력하면 비밀번호를 반환, 없으면 alert 띄우고 회원가입 페이지로 이동 -->
+    <form action = "./findPwAction.php" method = "post">
+        <input type = "text" name = "pw" id = "pw" placeholder="아이디를 입력하세요">
+        <button type = "submit" > 비밀번호 찾기</button>
+    </form>
+</body>
+</html>

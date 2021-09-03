@@ -9,7 +9,6 @@
 <body>
     <div id="data">
 
-
     </div>
     <script>
         function printer(texttoadd){
@@ -19,16 +18,20 @@
         document.getElementById("data").appendChild(node);
     }
 
-
-        if(localStorage.getItem("taglistsize")){
+        if(localStorage.getItem("taglistsize")){ // Application > LocalStorage 들어가서 태그 입력한 값 확인해보기 
     let taglistsize=localStorage.getItem("taglistsize");
     //localstorage에 저장된 값 가져오는 코드
     
     for(i=1;i<=taglistsize;i++){
         console.log(localStorage.getItem(i));
+        <?php
+        //배열을 만들어서 php 배열에 localStorage.getItem(i)값 넣기
+        $arr = array();
+        $arr['<script>i</script>'] = '<script>localStorage.getItem(i)</script>';
+        ?>
         if(localStorage.getItem(i)!="undefined"){
             printer(localStorage.getItem(i));
-                }
+                } // 태그 여러개를 한꺼번에 넘겨서 순서대로 태그를 기준으로 검색
        
     }
 
