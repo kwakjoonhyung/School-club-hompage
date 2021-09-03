@@ -1,4 +1,6 @@
-
+html{
+  font-size: 35px;
+}
 *{
   padding: 0;
   margin: 0;
@@ -10,14 +12,14 @@ body{
   font-family: montserrat;
 }
 nav{
-  background: #0082e6;
+  background: #4A4945;
   height: 80px;
   width: 100%;
   position: relative;
 }
 label.logo{
   color: white;
-  font-size: 35px;
+  font-size: 5rem;
   line-height: 80px;
   padding: 0 100px;
   font-weight: bold;
@@ -40,9 +42,10 @@ label.logo{
   width: 0;
   height: 50%;
   display: inline-block;
-  background: #9aa9ff;
+  background: #74726d;
   position: absolute;
   bottom:27%;
+  opacity: 0.5;
   left:0;
   z-index:-1;
   transition: 0.2s all;
@@ -61,8 +64,9 @@ label.logo{
   width: 0;
   height: 50%;
   display: inline-block;
-  background: #9aa9ff;
+  background: #74726d;
   position: absolute;
+  opacity: 0.5;
   bottom:27%;
   left:0;
   z-index:-1;
@@ -75,8 +79,8 @@ label.logo{
 
 ul li a{
   color:black;
-  font-size: 1.2vw;
-  padding: 7px 13px;
+  font-size: 0.7rem;
+  padding: 7px 30px;
   border-radius: 3px;
 }
 /* a.active,a:hover{
@@ -84,7 +88,7 @@ ul li a{
   transition: .5s;
 } */
 .checkbtn{
-  font-size: 30px;
+  font-size: 0.5rem;
   color: white;
   float: right;
   line-height: 80px;
@@ -146,7 +150,8 @@ ul li a{
   margin-right: 0%;
   width: 30%;
   height: 400px;
-  background-color: rgb(202, 202, 202);
+  background-color: rgb(98, 112, 119);
+  
   text-align: center;
 }
 
@@ -161,7 +166,7 @@ ul li a{
 #box-2 {
   width: 30%;
   height: 400px;
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(98, 112, 119);
 
   
 }
@@ -169,11 +174,11 @@ ul li a{
 
   width: 30%;
   height: 400px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(98, 112, 119);
   
 }
 .box{
-  font-size: 30px;
+  font-size: 0.7rem;
   text-align: center;
 }
 #동아리{
@@ -211,14 +216,14 @@ ul li a{
 
 .searchTerm {
   width: 90%;
-  border: 3px solid #0082e6;
+  border: 3px solid #4A4945;
   border-right: none;
   padding: 35px;
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #0082e6;
-  font-size: 1.5vw;
+  font-size: 0.5rem;
   margin-bottom: 20%;
 
 
@@ -226,6 +231,7 @@ ul li a{
 
 .logologo{
   width: 15vw;
+  height: 10vh;
   position: absolute;
   left: 50%;
   transform: translateX(-50%); 
@@ -244,19 +250,20 @@ ul li a{
   border-top: black 1px solid; 
   padding:5px; 
   margin-top: 10%;
+  font-size: 0.5rem;
   font-weight: bold;
 
 }
 
 .searchTerm:focus{
-  color: #0082e6;
+  color: #4A4945;
 }
 
 .searchButton {
   height: 76px;
   width: 6%;
-  border: 1px solid #0082e6;
-  background: #0082e6;
+  border: 1px solid #4A4945;
+  background: #4A4945;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -293,6 +300,7 @@ ul li a{
   border: 1px solid transparent;
   border-radius: 20px;
   margin: 5px;
+  font-size: 0.7rem;
   color: #FFFFFF;
   background-color: #4DB6AC;
   cursor: pointer;
