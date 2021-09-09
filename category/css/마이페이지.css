@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+}
+#head{
+    background-color: rgb(19, 19, 94);
+    text-align: right;
+    padding: 10px;
+
+}
+#head ul li{
+    text-align: center;
+    list-style: none;
+    display: inline;
+    font-size: 1rem;
+    padding: 10px;
+
+    border-right : white solid 1px;
+    color:white;
+}
+#head ul li:nth-child(1){
+
+    border-left : white solid 1px;
+
+}
+#head ul{
+    margin-right: 10%;
+}
+
+#photo{
+    background-image: url('../사진/인하대사진.jpg');
+    height: 150px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10%;
+    line-height: 150px;
+   
+}
+#photo h2{
+    vertical-align: middle;
+}
+
+#container{
+    margin-left: 20%;
+    margin-right: 20%;
+}
