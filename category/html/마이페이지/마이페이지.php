@@ -1,60 +1,80 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>마이페이지</title>
-    <link rel="stylesheet" href="../../css/마이페이지.css">
-    <script src="jquery-3.4.1.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/마이페이지.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Document</title>
 </head>
 <body>
-<div id="modify_container">
-	<h1>회원정보 수정 화면</h1>
-    <form class="modify_form" action="modifyAction.jsp" method="post" name="reg_frm">
-    	<table class="modify_table">
-    	<tr>
-    		<td class="text">아이디</td>
-    		<td><input type = "text" name= "id" value = "<%= dto.getUserId() %>"></td>
-    	</tr>
-    	<tr>
-    		<td class="text">비밀번호</td>
-    		<td><input type="text" name="pw" value="<%= dto.getUserPassword() %>"></td>
-    	</tr>
-    	<tr>
-    		<td class="text">비밀번호 확인</td>
-    		<td><input type="text" name="pw_check" value="<%= dto.getUserPassword() %>"></td>
-    	</tr>
-    	<tr>
-    		<td class="text">이름</td>
-    		<td><input type="text"name="userName" value="<%= dto.getUserName() %>"></td>
-    	</tr>
-    	<tr>
-    		<td class="text">성별</td>
-    		<td>
-    		<%
-    			if(dto.getUserGender() == "남자") { 
-    		%>
-        //성별이 남자인경우
-    		<input type="radio" name="userGender" autocomplete="off" value="남자" checked>남자
-    		<input type="radio" name="userGender" autocomplete="off" value="여자">여자
-    		<%		
-    			} else {
-    		%>
-        //성별이 여자인경우
-    		<input type="radio" name="userGender" autocomplete="off" value="남자">남자
-    		<input type="radio" name="userGender" autocomplete="off" value="여자" checked>여자
-    		<%
-    			}
-    		%>
-    		</td>
-    	</tr>    	    	
-    	<tr>
-    		<td class="text">이메일</td>
-    		<td><input type="email" name="userEmail" value="<%= dto.getUserEmail() %>"></td>
-    	</tr>      	    	
-    	</table>
-    	<input type="submit" value="수정" class="btn" onclick="updateInfoConfirm();">
-    	<input type="reset" value="취소" class="btn" onclick="javascript:window.location='main.jsp'">
-    </form>
-</div>    
+
+	<div id="head">
+		<ul>
+			<li>처음으로</li>
+			<li>로그아웃</li>
+			<li>마이페이지</li>
+		</ul>
+	</div>
+	<div style="height: 50px;">
+
+	</div>
+	<div id="photo">
+		<h2>마이페이지</h2>
+	</div>
+		<div class="part-5">
+			<h2>마이페이지</h2>
+			<div class="head">
+				<!--
+				ul>li*4>a[href=#]{메뉴 아이템 $}
+				-->
+				<ul>
+					<li class="active"><a href="#">메뉴 아이템 1</a></li>
+					<li><a href="#">메뉴 아이템 2</a></li>
+					<li><a href="#">메뉴 아이템 3</a></li>
+					<li><a href="#">메뉴 아이템 4</a></li>
+				</ul>
+			</div>
+			<div class="body">
+				<!--
+				div*4
+				-->
+				<div class="active">내용 1</div>
+				<div>내용 2</div>
+				<div>내용 3</div>
+				<div>내용 4</div>
+			</div>
+		</div>
+
+
+		<script>
+			$('.part-5 .head > ul > li').click(function() {
+		// 클릭된 당사자 => this
+		// 이 함수를 실행한 주어 => this
+		// 굳이 포장을 하는 이유
+		var $클릭된_녀석 = $(this);
+		
+		var $part5 = $클릭된_녀석.closest('.part-5');
+		//var $part5 = $클릭된_녀석.parent().parent().parent(); // $part5를 얻는 또 다른 방법
+		// 오직 $part5 안에서만 .body 로 검색해서 나온 것들 포장해주세요.
+		var $body = $part5.find('.body');
+		
+		// 기존에 active 가진 녀석에게 active 빼앗기
+		$클릭된_녀석.parent().find('.active').removeClass('active');
+		$클릭된_녀석.addClass('active');
+		
+		// 클릭된 녀석이 형제 중에서 몇 번째 인지 확인(참고로 0부터 셉니다.);
+		var index = $클릭된_녀석.index();
+		
+		// part-5 라는 클래스를 가진 나의 조상중에 나랑 가장 가까운 1개를 포장해주세요.
+		
+		// 기존의 active 된 요소들에서 active 제거
+		$body.find('.active').removeClass('active');
+		
+		$body.find('div:nth-child(' + (index + 1) + ')').addClass('active');
+	});
+		</script>
 </body>
 </html>

@@ -11,7 +11,6 @@
   <body>
     <?php
       session_start();
-      // $c_id = $_COOKIE["c_id"];
     ?>
     <nav>
       <input type="checkbox" id="check">
@@ -27,11 +26,11 @@
             $id = $_SESSION['id'];
             $name = $_SESSION['name'];
             ?>
-            <li style = "font-size : 15px;"><a href = "./마이페이지/마이페이지.html" style = "color : white; font-size : 25px;">My Page</a>
-            <a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</a> <br> <?php
-            echo "<strong>$name</strong>($id)님 환영합니다.";
-          }
-        ?></a></li>
+            <li style = "font-size : 15px;"><a href = "./마이페이지/마이페이지.php" style = "color : white; font-size : 25px;">My Page</a>
+            <a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</a> <br> 
+            <span style = "color : white; margin : 30px;"><?php
+            echo "<strong>$name</strong>($id)님 환영합니다."; } ?></span>
+      </a></li>
       </ul>
       
     </nav>
