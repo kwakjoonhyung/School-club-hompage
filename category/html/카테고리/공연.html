@@ -30,8 +30,11 @@
     
       <transition-group class="projects" name="projects" >
         <div class="project" v-if="currentFilter === project.category || currentFilter === '전체'" v-bind:key="project.title" v-for="project in projects">
+
           <div class="project-image-wrapper">
-            <img class="project-image" v-bind:src="project.image">
+            <a v-bind:href = "project.url" >
+            <img class="project-image" v-bind:src="project.image"></a>
+            
             <div class="gradient-overlay"></div>
             <div class="circle">
               <span class="project-title">{{project.title}}</span>
@@ -48,8 +51,8 @@
    data: {
       currentFilter: '전체',
       projects: [
-        {title: "극단,봄", image: "../../사진/공연/극단,봄.jpg", category: '뮤지컬/연극'},
-        {title: "인하극예술연구회", image: "../../사진/공연/인하극예술연구회.jpg", category: '뮤지컬/연극'},
+        {title: "극단,봄", image: "../../사진/공연/극단,봄.jpg", category: '뮤지컬/연극', url : "../세부동아리/공연/극단봄.html"},
+        {title: "인하극예술연구회", image: "../../사진/공연/인하극예술연구회.jpg", category: '뮤지컬/연극', url : "../세부동아리/공연/인하극예술연구회.html"},
         {title: "개로", image: "../../사진/공연/개로.jpg", category: '힙합'},
         {title: "꼬망스", image: "../../사진/공연/꼬망스.jpg", category: '가요'},
         {title: "노래사랑", image: "../../사진/공연/노래사랑.jpg", category: '가요'},

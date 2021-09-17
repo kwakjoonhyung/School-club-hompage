@@ -13,7 +13,7 @@
     	<table class="modify_table">
     	<tr>
     		<td class="text">아이디</td>
-    		<td><%= dto.getUserID() %></td>
+    		<td><input type = "text" name= "id" value = "<%= dto.getUserId() %>"></td>
     	</tr>
     	<tr>
     		<td class="text">비밀번호</td>

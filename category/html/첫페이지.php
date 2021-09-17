@@ -26,13 +26,10 @@
           } else{
             $id = $_SESSION['id'];
             $name = $_SESSION['name'];
-            ?><li><a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</li>
-            <li style = "font-size : 15px;">
-              <?php
-              echo "<strong>$name</strong>($id)님 환영합니다.";
-              ?>
-            </li>
-             <?php
+            ?>
+            <li style = "font-size : 15px;"><a href = "./마이페이지/마이페이지.html" style = "color : white; font-size : 25px;">My Page</a>
+            <a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</a> <br> <?php
+            echo "<strong>$name</strong>($id)님 환영합니다.";
           }
         ?></a></li>
       </ul>
@@ -45,18 +42,18 @@
 
     </div>
     <ul class="left-ul">
-      <li><a href="#">공연</a></li>
-      <li><a href="#">어학</a></li>
-      <li><a href="#">연구</a></li>
-      <li><a href="#">사회</a></li>
-      <li><a href="#">종교</a></li>
+      <li><a href="./카테고리/공연.html">공연</a></li>
+      <li><a href="./카테고리/어학.html/">어학</a></li>
+      <li><a href="./카테고리/연구.html">연구</a></li>
+      <li><a href="./카테고리/사회.html">사회</a></li>
+      <li><a href="./카테고리/종교.html">종교</a></li>
     </ul>
     <ul class="right-ul">
-      <li><a href="#">전시</a></li>
-      <li><a href="#">무예</a></li>
-      <li><a href="#">구기</a></li>
-      <li><a href="#">레저</a></li>
-      <li><a href="#">봉사</a></li>
+      <li><a href="./카테고리/전시.html">전시</a></li>
+      <li><a href="./카테고리/무예.html">무예</a></li>
+      <li><a href="./카테고리/구기.html">구기</a></li>
+      <li><a href="./카테고리/레저.html">레저</a></li>
+      <li><a href="./카테고리/봉사.html">봉사</a></li>
     </ul>
      
     
