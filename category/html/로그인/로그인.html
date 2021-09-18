@@ -24,9 +24,10 @@
             <div class="btn-area">
                 <button id="btn" type="submit">로그인</button>
             </div>
-
-            
         </form>
+        <div class="btn-area">
+            <button id="btn" type="submit" onclick="gomain()">메인페이지로 이동</button>
+        </div>
         <div class="Find_container" style="justify-content: space-evenly; display: flex;">
             <div class="caption1">
                 <a href="./아이디비번찾기.html">아이디/비밀번호 찾기</a>  
@@ -41,6 +42,9 @@
     </section>
 
 <script>
+    function gomain(){
+        location.href="../첫페이지.php";
+    }
     let id = $('#id');
     let pw = $('#pw');
     let btn = $('#btn');

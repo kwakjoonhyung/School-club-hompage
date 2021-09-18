@@ -44,10 +44,16 @@
             <div class="btn-area">
                 <button id="btn" type="submit">완료</button>
             </div>
-        </form>   
+        </form> 
+        <div class="btn-area">
+            <button id="btn" type="submit" onclick="gomain()">첫페이지로 이동</button>
+        </div>  
     </section>
 
 <script>
+    function gomain(){
+        location.href="../첫페이지.php";
+    }
         let id = $('#id');
         let pw = $('#pw');
         let btn = $('#btn');
