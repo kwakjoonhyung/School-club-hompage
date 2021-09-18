@@ -41,8 +41,8 @@
 
     </div>
     <ul class="left-ul">
-      <li><a href="./카테고리/공연.html">공연</a></li>
-      <li><a href="./카테고리/어학.html/">어학</a></li>
+      <li><a href="./카테고리/공연.php">공연</a></li>
+      <li><a href="./카테고리/어학.html">어학</a></li>
       <li><a href="./카테고리/연구.html">연구</a></li>
       <li><a href="./카테고리/사회.html">사회</a></li>
       <li><a href="./카테고리/종교.html">종교</a></li>

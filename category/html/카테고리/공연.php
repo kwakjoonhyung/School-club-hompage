@@ -5,18 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../css/vue.css">
+    <link rel="stylesheet" href="../../css/header.css">
     <title>TEST!!</title>
   </head>
   <body>
+    <?php
+    session_start();
+  ?>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul style="text-align: right;">
+    <li style="padding: 10px;"><?php 
+        if(!isset($_SESSION['id'])){
+          ?> <li><a href="./로그인/로그인.html" style="color: white; font-size: 25px;" >Login</li>
+          <?php
+        } else{
+          $id = $_SESSION['id'];
+          $name = $_SESSION['name'];
+          ?>
+          <li style = "font-size : 15px;"><a href = "./마이페이지/마이페이지.php" style = "color : white; font-size : 25px;">My Page</a>
+          <a href = "./로그인/logout.php" style="color: white; font-size: 25px;">Logout</a> <br> 
+          <span style = "color : white; margin : 30px;"><?php
+          echo "<strong>$name</strong>($id)님 환영합니다."; } ?></span>
+    </a></li>
+    </ul>
     
-    <div id="app">
+  </nav>
+
+  <div class ="logologo" onclick="gomain()">
+    <img src="../../사진/logo.png"> 
+    <p>인하대학교 동아리</p>
+
+  </div>
+  <ul class="left-ul">
+    <li><a href="공연.php">공연</a></li>
+    <li><a href="./카테고리/어학.html">어학</a></li>
+    <li><a href="./카테고리/연구.html">연구</a></li>
+    <li><a href="./카테고리/사회.html">사회</a></li>
+    <li><a href="./카테고리/종교.html">종교</a></li>
+  </ul>
+  <ul class="right-ul">
+    <li><a href="./카테고리/전시.html">전시</a></li>
+    <li><a href="./카테고리/무예.html">무예</a></li>
+    <li><a href="./카테고리/구기.html">구기</a></li>
+    <li><a href="./카테고리/레저.html">레저</a></li>
+    <li><a href="./카테고리/봉사.html">봉사</a></li>
+  </ul>
+  
+   
+    
+    <div id="app" style="margin-top:200px">
       <div class="title-container">
         <div>
-          <h3 class="title">
-            공연
-          </h3>
         </div>
-        <div class="filters">
+        <div class="filters" style="font-size:20px">
          <span class="filter" v-bind:class="{ active: currentFilter === '전체' }" v-on:click="setFilter('전체')">전체</span>
          <span class="filter" v-bind:class="{ active: currentFilter === '뮤지컬/연극' }" v-on:click="setFilter('뮤지컬/연극')">뮤지컬/연극</span>
          <span class="filter" v-bind:class="{ active: currentFilter === '힙합' }" v-on:click="setFilter('힙합')">힙합</span>
@@ -76,6 +121,9 @@
       }
    }
 })
+function gomain(){
+  location.href="../첫페이지.php";
+}
     </script>
     
   </body>
