@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--     뭔가 추가한것 -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
