@@ -309,3 +309,6 @@ html{
   #app{
     margin-top: 200px;
   }
+  .filters{
+    font-size: 20px;
+  }
