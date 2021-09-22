@@ -13,7 +13,6 @@
       session_start();
     ?>
     <nav> 
-      혜연이 최고
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
