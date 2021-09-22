@@ -305,3 +305,7 @@ html{
     background-color: #4DB6AC;
     cursor: pointer;
   }
+
+  #app{
+    margin-top: 200px;
+  }

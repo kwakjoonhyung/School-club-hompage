@@ -57,7 +57,7 @@
   
    
     
-    <div id="app" style="margin-top:200px">
+    <div id="app">
       <div class="title-container">
         <div>
         </div>
