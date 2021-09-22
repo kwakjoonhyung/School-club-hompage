@@ -87,15 +87,15 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "인하라이더", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "이카루스", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "탈라리아", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "SKIN-SCUBA", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하대 조정부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하스키부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "산악부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "수영부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "스노우보드동아리", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "인하라이더", image: "../../사진/레저/인하라이더.jpg", category: '전체'},
+        {title: "이카루스", image: "../../사진/레저/이카루스.jpg", category: '전체'},
+        {title: "탈라리아", image: "../../사진/레저/탈라리아.jpg", category: '전체'},
+        {title: "SKIN-SCUBA", image: "../../사진/레저/SKIN-SCUBA.jpg", category: '전체'},
+        {title: "인하대 조정부", image: "../../사진/레저/조정부.jpg", category: '전체'},
+        {title: "인하스키부", image: "../../사진/레저/인하스키부.jpg", category: '전체'},
+        {title: "산악부", image: "../../사진/레저/산악부.jpg", category: '전체'},
+        {title: "수영부", image: "../../사진/레저/수영.jpg", category: '전체'},
+        {title: "스노우보드동아리", image: "../../사진/레저/스노우보드.jpg", category: '전체'},
       ]
    },
    methods: {

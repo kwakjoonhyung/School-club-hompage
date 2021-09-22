@@ -86,15 +86,15 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "메이커", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "양현재", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "화우회", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "ADGON", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "등대", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "만화촌", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하문학회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "IMAGE", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "샘 동인회", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "메이커", image: "../../사진/전시/메이커.jpg", category: '전체'},
+        {title: "양현재", image: "../../사진/전시/양현재.jpg", category: '전체'},
+        {title: "화우회", image: "../../사진/전시/화우회.jpg", category: '전체'},
+        {title: "ADGON", image: "../../사진/전시/ADGON.jpg", category: '전체'},
+        {title: "등대", image: "../../사진/전시/등대.jpg", category: '전체'},
+        {title: "만화촌", image: "../../사진/전시/만화촌.jpg", category: '전체'},
+        {title: "인하문학회", image: "../../사진/전시/인하문학회.jpg", category: '전체'},
+        {title: "IMAGE", image: "../../사진/전시/IMAGE.jpg", category: '전체'},
+        {title: "샘 동인회", image: "../../사진/전시/샘동인회.jpg", category: '전체'},
       ]
    },
    methods: {

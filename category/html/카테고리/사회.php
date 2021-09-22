@@ -86,12 +86,12 @@
    data: {
       currentFilter: '전체',
       projects: [
-        {title: "독서 삼매경", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "소네팅", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "씨앗", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "인액터스", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "페다고지", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "TEDxInhaU", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "독서 삼매경", image: "../../사진/사회/독서 삼매경.jpg", category: '전체'},
+        {title: "소네팅", image: "../../사진/사회/소네팅.jpg", category: '전체'},
+        {title: "씨앗", image: "../../사진/사회/씨앗.jpg", category: '전체'},
+        {title: "인액터스", image: "../../사진/사회/인액터스.jpg", category: '전체'},
+        {title: "페다고지", image: "../../사진/사회/페다고지.jpg", category: '전체'},
+        {title: "TEDxInhaU", image: "../../사진/사회/TEDxInhaU.jpg", category: '전체'},
       ]
     },
    methods: {

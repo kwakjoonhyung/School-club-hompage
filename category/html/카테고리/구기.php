@@ -88,17 +88,17 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "라품", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "러브올", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "마농", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "볼링부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "비룡야구부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "셔틀콕", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "여자축구동아리 INHA-WICS", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "인하fc", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "에이스리베로", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "Inha Teal Dragons", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "테니스부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "라품", image: "../../사진/구기/테니스.jpg", category: '전체'},
+        {title: "러브올", image: "../../사진/구기/러브올.jpg", category: '전체'},
+        {title: "마농", image: "../../사진/구기/마농.jpg", category: '전체'},
+        {title: "볼링부", image: "../../사진/구기/볼링부.JPG", category: '전체'},
+        {title: "비룡야구부", image: "../../사진/구기/비룡야구부.jpg", category: '전체'},
+        {title: "셔틀콕", image: "../../사진/구기/셔틀콕.jpg", category: '전체'},
+        {title: "여자축구동아리 INHA-WICS", image: "../../사진/구기/여자축구.jpg", category: '전체'},
+        {title: "인하fc", image: "../../사진/구기/축구.jpg", category: '전체'},
+        {title: "에이스리베로", image: "../../사진/구기/에이스리베로.jpg", category: '전체'},
+        {title: "Inha Teal Dragons", image: "../../사진/구기/미식축구.jpg", category: '전체'},
+        {title: "테니스부", image: "../../사진/구기/테니스.jpg", category: '전체'},
       ]
    },
    methods: {

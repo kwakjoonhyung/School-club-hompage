@@ -86,13 +86,13 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "검도부", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "바크로바틱소울즈", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "COMBATE", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "인하대학교 태권도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하암즈", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하유도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "IBF", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "검도부", image: "../../사진/무예/검도부.jpg", category: '전체'},
+        {title: "바크로바틱소울즈", image: "../../사진/무예/바크로바틱소울즈.jpg", category: '전체'},
+        {title: "COMBATE", image: "../../사진/무예/COMBATE.jpg", category: '전체'},
+        {title: "인하대학교 태권도부", image: "../../사진/무예/태권도.jpg", category: '전체'},
+        {title: "인하암즈", image: "../../사진/무예/인하암즈.jpg", category: '전체'},
+        {title: "인하유도부", image: "../../사진/무예/인하유도회.jpg", category: '전체'},
+        {title: "IBF", image: "../../사진/무예/IBF.jpg", category: '전체'},
       ]
    },
    methods: {
