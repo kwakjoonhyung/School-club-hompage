@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 	dfgfd -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../css/vue.css">
-    <title>TEST!!</title>
+    <link rel="stylesheet" href="../../css/header.css">
+
   </head>
   <body>
     
@@ -14,7 +14,7 @@
       <div class="title-container">
         <div>
           <h3 class="title">
-            구기
+            무예
           </h3>
         </div>
         <div class="filters">
@@ -42,17 +42,13 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "라품", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "러브올", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "마농", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "볼링부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "비룡야구부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "셔틀콕", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "여자축구동아리 INHA-WICS", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "인하fc", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "에이스리베로", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "Inha Teal Dragons", image: "https://picsum.photos/g/200?image=133", category: '전체'},
-        {title: "테니스부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "검도부", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "바크로바틱소울즈", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "COMBATE", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "인하대학교 태권도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하암즈", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하유도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "IBF", image: "https://picsum.photos/g/200?image=133", category: '전체'},
       ]
    },
    methods: {

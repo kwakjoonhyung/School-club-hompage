@@ -42,17 +42,17 @@
     </div>
     <ul class="left-ul">
       <li><a href="./카테고리/공연.php">공연</a></li>
-      <li><a href="./카테고리/어학.html">어학</a></li>
-      <li><a href="./카테고리/연구.html">연구</a></li>
-      <li><a href="./카테고리/사회.html">사회</a></li>
-      <li><a href="./카테고리/종교.html">종교</a></li>
+      <li><a href="./카테고리/어학.php">어학</a></li>
+      <li><a href="./카테고리/연구.php">연구</a></li>
+      <li><a href="./카테고리/사회.php">사회</a></li>
+      <li><a href="./카테고리/종교.php">종교</a></li>
     </ul>
     <ul class="right-ul">
-      <li><a href="./카테고리/전시.html">전시</a></li>
-      <li><a href="./카테고리/무예.html">무예</a></li>
-      <li><a href="./카테고리/구기.html">구기</a></li>
-      <li><a href="./카테고리/레저.html">레저</a></li>
-      <li><a href="./카테고리/봉사.html">봉사</a></li>
+      <li><a href="./카테고리/전시.php">전시</a></li>
+      <li><a href="./카테고리/무예.php">무예</a></li>
+      <li><a href="./카테고리/구기.php">구기</a></li>
+      <li><a href="./카테고리/레저.php">레저</a></li>
+      <li><a href="./카테고리/봉사.php">봉사</a></li>
     </ul>
      
     

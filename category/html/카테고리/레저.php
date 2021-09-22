@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 여기한번해보자 -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../../css/vue.css">
-    <title>TEST!!</title>
+    <link rel="stylesheet" href="../../css/header.css">
+
   </head>
   <body>
     
@@ -13,7 +15,7 @@
       <div class="title-container">
         <div>
           <h3 class="title">
-            무예
+            레저
           </h3>
         </div>
         <div class="filters">
@@ -41,13 +43,15 @@
    data: {
       currentFilter: '전체',
       projects: [
-	  	  {title: "검도부", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "바크로바틱소울즈", image: "https://picsum.photos/g/200?image=122", category: '전체'},
-        {title: "COMBATE", image: "https://picsum.photos/g/200?image=116", category: '전체'},
-        {title: "인하대학교 태권도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하암즈", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "인하유도부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
-        {title: "IBF", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+	  	  {title: "인하라이더", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "이카루스", image: "https://picsum.photos/g/200?image=122", category: '전체'},
+        {title: "탈라리아", image: "https://picsum.photos/g/200?image=116", category: '전체'},
+        {title: "SKIN-SCUBA", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하대 조정부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "인하스키부", image: "https://picsum.photos/g/200?image=121", category: '전체'},
+        {title: "산악부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "수영부", image: "https://picsum.photos/g/200?image=133", category: '전체'},
+        {title: "스노우보드동아리", image: "https://picsum.photos/g/200?image=133", category: '전체'},
       ]
    },
    methods: {
