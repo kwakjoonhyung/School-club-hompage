@@ -97,7 +97,7 @@
         {title: "NETers", image: "../../사진/연구/NETers.jpg", category: '전체'},
         {title: "인하 기우회", image: "../../사진/연구/인하 기우회.jpg", category: '전체'},
         {title: "인하로케트연구회", image: "../../사진/연구/인하로케트연구회.jpg", category: '전체'},
-        {title: "I.C.C", image: "../../사진/연구/I.C.C.jpg", category: '전체'},
+        {title: "I.C.C", image: "../../사진/연구/I.C.C.png", category: '전체'},
       ]
    },
    methods: {
