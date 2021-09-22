@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/마이페이지.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="head">
+		<ul>
+			<li>처음으로</li>
+			<li>로그아웃</li>
+			<li>마이페이지</li>
+		</ul>
+	</div>
+	<div style="height: 50px;">
+
+	</div>
+	<div id="photo">
+		<h2>마이페이지</h2>
+	</div>
+	<div id="container">
+
+		<h3>마이페이지</h3>
+		<button onclick="change()" id="btn_change">정보 수정</button>
+		<button onclick="scra()" id="btn_scrap">나의 스크랩</button>
+		<button onclick="regi()" id="btn_register">등록한 게시글</button>
+		<div style="height: 50px;">
+
+		</div>
+		<table border="1" id="info-change">
+			<th>정보 수정</th>
+			<th>제목</th>
+			<th>모집기간</th>
+			<th>조회</th>
+			<tr><!-- 첫번째 줄 시작 -->
+				<td>첫번째 칸</td>
+				<td>두번째 칸</td>
+				<td>첫번째 칸</td>
+				<td>두번째 칸</td>
+			</tr><!-- 첫번째 줄 끝 -->
+			<tr><!-- 두번째 줄 시작 -->
+				<td>첫번째 칸</td>
+				<td>두번째 칸</td>
+				<td>첫번째 칸</td>
+				<td>두번째 칸</td>
+			</tr><!-- 두번째 줄 끝 -->
+			</table>
+			<table border="1" id="scrap">
+				<th>나의 스크랩</th>
+				<th>제목</th>
+				<th>모집기간</th>
+				<th>조회</th>
+				<tr><!-- 첫번째 줄 시작 -->
+					<td>첫번째 칸</td>
+					<td>두번째 칸</td>
+					<td>첫번째 칸</td>
+					<td>두번째 칸</td>
+				</tr><!-- 첫번째 줄 끝 -->
+				<tr><!-- 두번째 줄 시작 -->
+					<td>첫번째 칸</td>
+					<td>두번째 칸</td>
+					<td>첫번째 칸</td>
+					<td>두번째 칸</td>
+				</tr><!-- 두번째 줄 끝 -->
+				</table>
+				<table border="1" id="register">
+					<th>등록한 게시글</th>
+					<th>제목</th>
+					<th>모집기간</th>
+					<th>조회</th>
+					<tr><!-- 첫번째 줄 시작 -->
+						<td>첫번째 칸</td>
+						<td>두번째 칸</td>
+						<td>첫번째 칸</td>
+						<td>두번째 칸</td>
+					</tr><!-- 첫번째 줄 끝 -->
+					<tr><!-- 두번째 줄 시작 -->
+						<td>첫번째 칸</td>
+						<td>두번째 칸</td>
+						<td>첫번째 칸</td>
+						<td>두번째 칸</td>
+					</tr><!-- 두번째 줄 끝 -->
+					</table>
+			
+				
+	</div>
+	<script>
+		let btn_change=document.getElementById("btn_change");
+		let btn_scrap=document.getElementById("btn_scrap");
+		let btn_register=document.getElementById("register");
+
+		let info=document.getElementById("info-change");
+		let scrap=document.getElementById("scrap");
+		let register=document.getElementById("register");
+
+		function change(){
+			btn_change.style.backgroundColor="blue";
+			info.style.display='inline-block';
+			scrap.style.display='none';
+			register.style.display='none';
+		}
+		function scra(){
+			btn_change.style.backgroundColor="none";
+			info.style.display='none';
+			scrap.style.display='inline-block';
+			register.style.display='none';
+		}
+		function regi(){
+			info.style.display='none';
+			scrap.style.display='none';
+			register.style.display='inline-block';
+		}
+		
+	</script>
+
+
+</body>
+</html>
