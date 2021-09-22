@@ -12,11 +12,12 @@
     <?php
       session_start();
     ?>
-    <nav>
+    <nav> 
+      혜연이 최고
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
-      </label>
+      <!-- </label> -->
       <ul style="text-align: right;">
       <li style="padding: 10px;"><?php 
           if(!isset($_SESSION['id'])){
