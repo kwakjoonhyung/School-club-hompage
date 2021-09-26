@@ -9,6 +9,13 @@
     $pw = $_POST['pw'];
     $content = $_POST['content'];
     $date = date("Y-m-d H:i:s");
+    $current_time = time(); 
+    $datetime = 'date'; 
+    $date_timestamp = strtotime($datetime) 
+    $d_day_m = floor(($date_timestamp - $current_time) / 86400);
+    echo 'D-'.$d_day_m
+
+
 
     $query = "INSERT * FROM board(title, content, name, pw,date) VALUES ('$title', '$content', '$name', '$pw','$date' ";
     $result = mysqli_query($conn, $query);
